@@ -6,7 +6,7 @@ docker buidl -t "mine-gin:latest" .
 ```
 
 ## Start docker
-Since in docker file, we not put the command so when start we needed it.
+Just simply start
 ```
-docker run -p 8999:8929 mine-gin go run app.go
+docker run -p 8998:8929 mine-gin
 ```

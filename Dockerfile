@@ -1,7 +1,11 @@
-FROM golang:1.11
+FROM golang:latest
 
-WORKDIR /go/src/app
-COPY . .
+WORKDIR /app
+ADD . /app
 
 RUN go get github.com/gin-gonic/gin
-RUN go install github.com/gin-gonic/gin
+RUN go build ./app.go
+
+EXPOSE 8929
+
+CMD ["./app"]
